@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>Create User - PHP Webmin</title>
+<SCRIPT LANGUAGE="JavaScript">
+defaultStatus="admin logged into PHP Webmin on linux.";
+</SCRIPT>
+</head>
+<body bgcolor=#ffffff link=#0000ee vlink=#0000ee text=#000000>
+<hr>
+<form action="save_user.php" method="post">
+<br><br>
+<table border width=100%>
+<tr > <td><b>User Details</b></td> </tr>
+<tr bgcolor=#cccccc> <td><table width=100%>
+<tr> <td><b>Username</b></td>
+<td><input name=user size=10 value=""></td>
+<td><b>User ID</b></td>
+<td><input name=uid size=10 value="500"></td> </tr>
+<tr>
+<td><b>Home directory</b></td>
+<td><input name=home size=25 value="">
+</td> </tr>
+<tr> <td valign=top><b>Shell</b></td>
+<td valign=top><select name=shell>
+<option value='/bin/sh' >/bin/sh
+<option value='/bin/csh' >/bin/csh
+<option value='/bin/bash' >/bin/bash
+<option value='/bin/false' >/bin/false
+<option value='/sbin/nologin'>/sbin/nologin
+<option value=*>Other..
+</select></td>
+<td valign=top rowspan=4><b>Password</b></td> <td rowspan=4>
+<input type=radio name=passmode value=0 > No password required<br>
+<input type=radio name=passmode value=1 > Encrypted password
+<input name=encpass size=13 value=""><br>
+</td> </tr>
+<tr> <td colspan=2><br></td> </tr>
+</table><p>
+<input type=submit value=Create></form><p>
+<hr>
+&nbsp;&nbsp;<a href="./">Return to users and groups list</a><p>
+</body></html>
